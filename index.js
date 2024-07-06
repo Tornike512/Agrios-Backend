@@ -7,6 +7,7 @@ const easyHarvesting = require("./public/Projects/easyHarvesting");
 const ecologicalFarming = require("./public/Projects/ecologicalFarming");
 const freshProducts = require("./public/Projects/freshProducts");
 const organicSolutions = require("./public/Projects/organicSolutions");
+const products = require("./public/Products/products");
 
 const app = express();
 
@@ -34,6 +35,10 @@ app.get("/projects/freshProducts", (req, res) => {
 
 app.get("/projects/organicSolutions", (req, res) => {
   res.json(organicSolutions);
+});
+
+app.get("/products/products", (req, res) => {
+  res.json(products);
 });
 
 const PORT = process.env.PORT || 5000;
