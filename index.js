@@ -1,14 +1,19 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-const healthyFood = require("./public/healthyFood");
+const healthyFood = require("./public/Projects/healthyFood");
+const agricultureFarming = require("./public/Projects/agricultureFarming");
 
 const app = express();
 
 app.use(cors());
 
-app.get("/api/healthyFood", (req, res) => {
+app.get("/projects/healthyFood", (req, res) => {
   res.json(healthyFood);
+});
+
+app.get("/projects/agricultureFarming", (req, res) => {
+  res.json(agricultureFarming);
 });
 
 const PORT = process.env.PORT || 5000;
