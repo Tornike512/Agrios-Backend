@@ -3,6 +3,10 @@ const cors = require("cors");
 const path = require("path");
 const healthyFood = require("./public/Projects/healthyFood");
 const agricultureFarming = require("./public/Projects/agricultureFarming");
+const easyHarvesting = require("./public/Projects/easyHarvesting");
+const ecologicalFarming = require("./public/Projects/ecologicalFarming");
+const freshProducts = require("./public/Projects/freshProducts");
+const organicSolutions = require("./public/Projects/organicSolutions");
 
 const app = express();
 
@@ -14,6 +18,22 @@ app.get("/projects/healthyFood", (req, res) => {
 
 app.get("/projects/agricultureFarming", (req, res) => {
   res.json(agricultureFarming);
+});
+
+app.get("/projects/easyHarvesting", (req, res) => {
+  res.json(easyHarvesting);
+});
+
+app.get("/projects/ecologicalFarming", (req, res) => {
+  res.json(ecologicalFarming);
+});
+
+app.get("/projects/freshProducts", (req, res) => {
+  res.json(freshProducts);
+});
+
+app.get("/projects/organicSolutions", (req, res) => {
+  res.json(organicSolutions);
 });
 
 const PORT = process.env.PORT || 5000;
